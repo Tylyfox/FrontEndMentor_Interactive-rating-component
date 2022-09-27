@@ -1,0 +1,276 @@
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;700&display=swap');
+
+// Color primary
+$orange: hsl(25, 97%, 53%);
+
+// Neutral color
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 26%, 12%);
+$background: hsl(228, 11%, 8%);
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: $veryDarkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    min-height: 100vh;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    color: $mediumGrey;
+}
+
+.card {
+    padding: 30px;
+    background: linear-gradient(to top right, $veryDarkBlue, $darkBlue);
+    width: 40%;
+    border-radius: 18px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $darkBlue;
+    height: 45px;
+    width: 45px;
+    float: left;
+}
+
+.image {
+    width: 38%;
+    height: auto;
+}
+
+h1 {
+    padding-top: 12px;
+    margin-bottom: 0;
+    color: $white;
+    font-size: 1.6rem;
+}
+
+p {
+    color: $lightGrey;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 24px;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $darkBlue;
+    height: 45px;
+    width: 45px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.numberValidate {
+    background-color: $orange;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.numberValidate:hover {
+    cursor: pointer;
+}
+
+.number:hover {
+    background-color: $lightGrey;
+    color: $white;
+    cursor: pointer;
+}
+
+.submit {
+    background-color: $orange;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 25px;
+    letter-spacing: 0.12rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    border-style: none;
+}
+
+.submit:hover {
+    background-color: $white;
+    color: $orange;
+}
+
+.remove {
+    display: none;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#card2 {
+    padding: 25px;
+    width: 42%
+}
+
+.endRating {
+    width: 47%;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.rate {
+    border-radius: 25px;
+    background-color: $darkBlue;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 15px;
+}
+
+.ratingNote {
+    margin: 5px;
+    color: $orange;
+    font-size: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 655px) {
+    .card {
+        width: 55%;
+        padding: 18px
+    }
+
+    #card2 {
+        padding: 25px;
+        width: 60%
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .card {
+        width: 60%;
+        padding: 18px
+    }
+
+    #card2 {
+        padding: 25px;
+        width: 70%
+    }
+
+    .ratingNote {
+        margin: 5px;
+        color: $orange;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card {
+        width: 74%;
+        padding: 18px
+    }
+
+    .submit {
+        padding: 15px;
+    }
+
+    h1 {
+        padding-top: 5px;
+    }
+
+    .number {
+        height: 40px;
+        width: 40px;
+        font-size: 0.9rem
+    }
+
+    .numberValidate {
+        height: 40px;
+        width: 40px;
+        font-size: 0.9rem
+    }
+
+    #card2 {
+        padding: 25px;
+        width: 74%
+    }
+
+    .ratingNote {
+        margin: 5px;
+        color: $orange;
+        font-size: 0.9rem;
+    }
+
+    .endRating {
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 10px
+    }
+}

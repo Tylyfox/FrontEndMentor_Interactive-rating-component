@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="card" id="card1">
+    <div class="logo">
+      <img src="./images/icon-star.svg" alt="une étoile orange" class="image">
+    </div>
+    <div>
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+    </div>
+    <div class="rating">
+      <div class="number" id="number1">1</div>
+      <div class="number" id="number2">2</div>
+      <div class="number" id="number3">3</div>
+      <div class="number" id="number4">4</div>
+      <div class="number" id="number5">5</div>
+    </div>
+    <input id="submit" class="submit" type="button" value="submit">
+  </div>
+  <div class="card remove" id="card2">
+    <div class="main">
+      <img src="./images/illustration-thank-you.svg" alt="thank you" class="endRating">
+    </div>
+    <div class="rate main">
+      <p class="ratingNote">You selected 4 out of 5</p>
+    </div>
+    <div class="main thank">
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content ">
+      <img src="./images/icon-star.svg" alt="une étoile orange" width="50px">
+      <h1 class="card style">¨Please, select a note. Thank you!</h1>
+      <img src="./images/icon-star.svg" alt="une étoile orange" width="50px">
+    </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
